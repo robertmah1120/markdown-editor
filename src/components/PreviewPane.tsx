@@ -11,7 +11,11 @@ const PreviewPane: React.FC<PreviewPaneProps> = ({ markdown }) => {
     const [htmlContent, setHtmlContent] = useState<string>('');
 
     useEffect(() => {
-        setHtmlContent(marked(markdown));
+        const parseMarkdown = async () => {
+            const result = await marked(markdown);
+            setHtmlContent(result);
+        };
+        parseMarkdown();
     }, [markdown]);
 
     const handleExport = () => {

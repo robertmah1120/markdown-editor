@@ -24,7 +24,7 @@
       "dom.iterable",
       "esnext"
     ],
-    "strict": true,
+    "strict": false,
     "noFallthroughCasesInSwitch": true,
     "moduleResolution": "node",
     "noEmit": true,

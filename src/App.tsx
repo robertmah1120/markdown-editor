@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import EditorPane from './components/EditorPane';
 import PreviewPane from './components/PreviewPane';
 import './styles/App.css';
@@ -12,7 +12,7 @@ const App = () => {
 
     return (
         <div className="app-container">
-            <EditorPane markdown={markdown} onMarkdownChange={handleMarkdownChange} />
+            <EditorPane markdown={markdown} setMarkdown={handleMarkdownChange} />
             <PreviewPane markdown={markdown} />
         </div>
     );
